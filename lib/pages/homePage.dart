@@ -95,6 +95,16 @@ class _HomePageState extends State<HomePage> {
                                 itemBuilder: (context, position) {
                                   return ProductListWidget(
                                     snapshot.data[position]["price"].toString(),
+                                    "\$",
+                                    Icons.favorite,
+                                    snapshot.data[position]["image"].toString(),
+                                    snapshot.data[position]["rating"]["count"]
+                                        .toString(),
+                                    snapshot.data[position]["title"].toString(),
+                                    "Rating : ",
+                                    snapshot.data[position]["rating"]["rate"]
+                                        .toString(),
+                                    Icons.star,
                                     context,
                                   );
                                 },
